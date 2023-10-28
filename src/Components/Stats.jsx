@@ -12,6 +12,7 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, missedChars, extraC
             timeSet.add(i[0]);
             return i;
         }
+        return true;
     })
    
 
