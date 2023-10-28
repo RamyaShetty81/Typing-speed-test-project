@@ -222,7 +222,7 @@ const TypingBox = () => {
     useEffect(() => {
         focusInput()
         wordsSpanRef[0].current.childNodes[0].className = 'current'; //cursor visible at first letter of word at mount
-    }, [])
+    }, [[wordsSpanRef]])
 
     useEffect(() => {
         const handleDoubleClicks = (e) => {
@@ -242,7 +242,7 @@ const TypingBox = () => {
         return () => {
             window.removeEventListener('keydown', handleDoubleClicks);
         };
-    });
+    }, [resetTest]);
 
     return (
         <div>
